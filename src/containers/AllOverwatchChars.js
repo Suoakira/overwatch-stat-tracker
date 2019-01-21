@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CharCard from "../components/CharCard"
-import { Loader } from "semantic-ui-react"
+import { Loader, Grid } from "semantic-ui-react"
 
 class AllOverwatchChars extends Component {
     constructor(props) {
@@ -31,7 +31,11 @@ class AllOverwatchChars extends Component {
             <React.Fragment>
                 {
                     this.state.overwatchChars ? 
-                        this.renderOverwatchChars()
+                        <Grid centered>
+  
+                                {this.renderOverwatchChars()}
+
+                        </Grid>
                         :
                         <Loader />
 
