@@ -20,7 +20,7 @@ class CharCard extends Component {
                 </Card.Content>
                 <Card.Content extra>
                     <a>
-                        <Icon name='user' />
+                        <Icon name='chevron circle up' />
                         {difficulty}
       </a>
                 </Card.Content>
