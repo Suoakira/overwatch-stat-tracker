@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CharCard from "../components/CharCard"
+import NavBar from "../containers/NavBar"
 import { Loader, Grid } from "semantic-ui-react"
 
 class AllOverwatchChars extends Component {
@@ -58,12 +59,10 @@ class AllOverwatchChars extends Component {
 
         return ( 
             <React.Fragment>
-                {
-                    this.state.overwatchChars ? 
+                    <NavBar />
+                    {this.state.overwatchChars ? 
                         <Grid columns={4} centered>
-  
                                 {this.renderOverwatchChars()}
-
                         </Grid>
                         :
                         <Loader />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Icon, Image, Grid, GridColumn } from 'semantic-ui-react'
+import { Card, Icon, Image, Grid, Button } from 'semantic-ui-react'
 
 class CharCard extends Component {
     constructor(props) {
@@ -35,7 +35,13 @@ class CharCard extends Component {
                             </Card.Content>
                         </Card.Description>
                     </Card.Content>
-                    <Card.Content extra>
+                    <Card.Content textAlign="center" extra>
+                        <Button
+                            color='red'
+                            content='Like'
+                            icon='heart'
+                            label={{ basic: true, color: 'red', pointing: 'left', content: '2,048' }}
+                        />
                     </Card.Content>
                 </Card>
             </Grid.Column>
