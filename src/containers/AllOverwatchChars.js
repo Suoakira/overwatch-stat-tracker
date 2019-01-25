@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import CharCard from "../components/CharCard"
-import NavBar from "../containers/NavBar"
 import Banner from "../components/Banner"
 import { Loader, Grid, GridColumn } from "semantic-ui-react"
 
@@ -60,8 +59,8 @@ class AllOverwatchChars extends Component {
 
         return ( 
             <React.Fragment>
-                    <NavBar />
-                    <Banner />
+
+
                     {this.state.overwatchChars ? 
                         <Grid columns={4} centered>
                                 {this.renderOverwatchChars()}

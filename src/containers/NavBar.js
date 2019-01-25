@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Input, Menu, Segment } from 'semantic-ui-react'
 
+import { NavLink } from "react-router-dom"
+
 export default class NavBar extends Component {
     state = { activeItem: 'home' }
 
@@ -12,7 +14,9 @@ export default class NavBar extends Component {
         return (
             <div>
                 <Menu pointing>
-                    <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+                    <NavLink to="/allchars">
+                        <Menu.Item name='All Chars' active={activeItem === 'All Chars'} onClick={this.handleItemClick} />
+                    </NavLink>
                     <Menu.Item
                         name='messages'
                         active={activeItem === 'messages'}
