@@ -17,14 +17,16 @@ export default class NavBar extends Component {
                     <NavLink to="/allchars">
                         <Menu.Item name='All Chars' active={activeItem === 'All Chars'} onClick={this.handleItemClick} />
                     </NavLink>
+                    <NavLink to="/personal-stats">
                     <Menu.Item
-                        name='messages'
-                        active={activeItem === 'messages'}
+                        name='Stats'
+                        active={activeItem === 'Stats'}
                         onClick={this.handleItemClick}
                     />
+                    </NavLink>
                     <Menu.Item
-                        name='friends'
-                        active={activeItem === 'friends'}
+                        name='chat'
+                        active={activeItem === 'chat'}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Menu position='right'>

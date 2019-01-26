@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import { Loader, Grid, GridColumn } from "semantic-ui-react"
+
 import CharCard from "../components/CharCard"
 import Banner from "../components/Banner"
-import { Loader, Grid, GridColumn } from "semantic-ui-react"
+
+
+
 
 class AllOverwatchChars extends Component {
     constructor(props) {
