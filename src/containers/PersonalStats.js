@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Grid, Image, Segment, Loading } from 'semantic-ui-react'
 
 import HeaderStats from "../components/HeaderStats"
+import AllStats from "../components/AllStats"
+
 
 class PersonalStats extends Component {
     constructor(props) {
@@ -31,17 +33,23 @@ class PersonalStats extends Component {
     render() {
         const { profile } = this.state
 
+
         return (
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>
                             {this.state.profile &&
+
                             <HeaderStats 
                                 profile={profile}
+    
                              />
+                         
+                
 
                             }
+
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
@@ -52,7 +60,9 @@ class PersonalStats extends Component {
                             <Grid.Column width={16}>
                                 <Grid.Row>
                                     <Segment>
-                                        <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+                                        <AllStats
+                                
+                                        />
                                     </Segment>
                                 </Grid.Row>
                                 <Grid.Row>
@@ -77,9 +87,19 @@ class PersonalStats extends Component {
                         <Grid>
                             <Grid.Column width={16}>
                                 <Grid.Row>
-                                    <Segment>
-                                        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
-                                    </Segment>
+                                    {this.state.completeStats &&
+                                        <div>
+                                             Competitive Medals
+                                            {console.log(this.state.completeStats.competitiveStats)}
+                                            <AllStats
+                                                competitiveMedals={[
+                                                    this.state.completeStats.competitiveStats.awards.cards,
+                                                    this.state.completeStats.competitiveStats.awards.medalsGold,
+                                                    this.state.completeStats.competitiveStats.awards.medalsSilver,
+                                                    this.state.completeStats.competitiveStats.awards.medalsBronze
+                                                ]} />
+                                        </div>
+                                    }
                                 </Grid.Row>
                                 <Grid.Row>
                                     <Segment>
