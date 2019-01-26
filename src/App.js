@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AllOverwatchChars from "./containers/AllOverwatchChars"
-import PersonalStats from "./components/PersonalStats"
+import PersonalStats from "./containers/PersonalStats"
 import NavBar from "./containers/NavBar"
 import Banner from "./components/Banner"
 
@@ -17,7 +17,6 @@ class App extends Component {
         <Header>All Overwatch Chars</Header>
         <Banner />
         <Route exact path='/allchars' component={(props) => <AllOverwatchChars /> } />
-
         <Route exact path="/personal-stats" component={(props) => <PersonalStats/> } />
 
       </div>

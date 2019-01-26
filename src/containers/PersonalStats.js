@@ -1,6 +1,7 @@
-import oversmash from 'oversmash'
 import React, { Component } from 'react'
-import { Grid, Image, Segment } from 'semantic-ui-react'
+import { Grid, Image, Segment, Loading } from 'semantic-ui-react'
+
+import HeaderStats from "../components/HeaderStats"
 
 class PersonalStats extends Component {
     constructor(props) {
@@ -28,12 +29,19 @@ class PersonalStats extends Component {
     }
 
     render() {
+        const { profile } = this.state
+
         return (
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>
-                            <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+                            {this.state.profile &&
+                            <HeaderStats 
+                                profile={profile}
+                             />
+
+                            }
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
